@@ -132,6 +132,7 @@ log_begin               # Begin log transaction
 pidfile_create          # Creating Pidfile
 is_master               # Checking if MongoDB is master
 create_dir $BKP_TMP     # Create backup directory
+dump_cleanup            # Cleanup uncompressed dump (if exists)
 dump_replicaset         # Begin mongodump for all dbs from replicaset
 dump_compress           # Compressing dumped databases
 dump_cleanup            # Cleanup uncompressed dump

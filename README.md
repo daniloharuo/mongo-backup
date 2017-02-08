@@ -13,6 +13,7 @@ chmod +x /usr/local/bin/mongo-backup
 
 Crontab Example:
 ```
-$ cat /etc/cron.d/mongo-backup
-03 */3 * * * root /usr/local/bin/mongo-backup
+$cat /etc/cron.d/mongo-backup
+# mongo-backup schedule: Run every 3 hours and 3 minutes
+03 */3 * * * mongod /usr/local/bin/mongo-backup
 ```
